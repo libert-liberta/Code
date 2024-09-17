@@ -1,0 +1,47 @@
+# file
+code.lock
+languagepacks.json
+rapid_render.json
+storage.json
+
+# directory
+Backups
+blob_storage
+Cache
+CachedConfigurations
+CachedData
+CachedExtensions
+CachedExtensionVSIXs
+CachedProfilesData
+clp
+Code Cache
+Cookies
+Cookies-journal
+Crashpad
+databases
+DawnCache
+DawnGraphiteCache
+DawnWebGPUCache
+Dictionaries
+GPUCache
+IndexedDB
+Local State
+Local Storage
+logs
+machineid
+Network
+Network Persistent State
+Preferences
+QuotaManager
+QuotaManager-journal
+Service Worker
+Session Storage
+Shared Dictionary
+SharedStorage
+TransportSecurity
+User/globalStorage
+User/History
+User/sync
+User/workspaceStorage
+WebStorage
+Workspaces
