@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		// VSCode の内部コマンド
+		{
+			"detail": "VSCode command",
+			"label": "terminal.focus",
+			"command": "${command:workbench.action.terminal.focus}",
+		},
+		{
+			"detail": "VSCode command",
+			"label": "focusActiveEditorGroup",
+			"command": "${command:workbench.action.focusActiveEditorGroup}",
+		},
+		{
+			"detail": "VSCode command",
+			"label": "terminal.killAll",
+			"command": "${command:workbench.action.terminal.killAll}",
+		},
+		{
+			"detail": "VSCode command",
+			"label": "togglePanel",
+			"command": "${command:workbench.action.togglePanel}",
+		},
+		// keybinding しているタスク
+		{
+			"detail": "キーボードにバインドしている(アクティブなエディタグループにフォーカス ctrl+`)",
+			"label": "keybinding togglePanel && focusActiveEditor",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"togglePanel",
+				"focusActiveEditorGroup",
+			]
+		},
+	]
+}

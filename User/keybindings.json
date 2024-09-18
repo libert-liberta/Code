@@ -1,0 +1,317 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    /*
+     *  拡大と縮小の無効化
+     */
+    {
+        "key": "ctrl+numpad_add",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+shift+oem_plus",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+oem_plus",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+numpad_subtract",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+shift+oem_minus",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+oem_minus",
+        "command": "-workbench.action.zoomOut"
+    },
+    /*
+     * ターミナル: クリア を無効化
+     * 以下のbashキーバインドに競合するため
+     * Ctrl+k カーソル位置から行末まで削除
+     */
+    {
+        "key": "ctrl+k",
+        "command": "-workbench.action.terminal.clear",
+    },
+    /*
+     *  Custom sequence keybindings を無効化
+     *  https://code.visualstudio.com/docs/terminal/advanced#_custom-sequence-keybindings
+     *  以下のbashキーバインドに競合するため
+     *  Ctrl+delete: 現在のカール位置から行末まで削除
+     */
+    {
+        "key": "ctrl+delete",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "terminalFocus"
+    },
+    // ターミナル: クリア
+    {
+        "key": "alt+oem_102",
+        "command": "workbench.action.terminal.clear",
+        "when": "terminalFocus"
+    },
+    // コンソールのクリア
+    {
+        "key": "alt+oem_102",
+        "command": "workbench.debug.panel.action.clearReplAction",
+        "when": "inDebugRepl"
+    },
+    // パネルにフォーカスする
+    // {
+    //     "key": "alt+p",
+    //     "command": "workbench.action.focusPanel",
+    // },
+    // デバッグ コンソールにフォーカスを移動
+    {
+        "key": "alt+oem_comma",
+        "command": "workbench.debug.action.focusRepl",
+        "when": "!terminalFocus"
+    },
+    // ターミナル: 前のターミナル グループにフォーカス
+    {
+        "key": "alt+oem_comma",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    // ターミナル: 次のターミナル グループにフォーカス
+    {
+        "key": "alt+oem_period",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    /*
+     *  複合キーバインド
+     *  シーケンス
+     *  表示: パネルの表示/非表示の切り替え
+     *  表示: アクティブなエディター グループにフォーカス
+     */
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.tasks.runTask",
+        "args": "keybinding togglePanel && focusActiveEditor",
+        "when": "terminalFocus"
+    },
+    // {
+    //     "key": "alt+e",
+    //     "command": "workbench.action.focusActiveEditorGroup",
+    //     "when": "!editorTextFocus"
+    // },
+    // {
+    //     "key": "alt+oem_plus",
+    //     "command": "workbench.action.focusActiveEditorGroup",
+    //     "when": "!editorTextFocus"
+    // },
+    // ターミナル: 新しいターミナルを作成する
+    {
+        "key": "alt+insert",
+        "command": "workbench.action.terminal.new",
+    },
+    // ターミナル: アクティブなターミナルインスタンスを強制終了
+    {
+        "key": "alt+end",
+        "command": "workbench.action.terminal.kill"
+    },
+    // ターミナル: アクティブなターミナルの切り替え
+    {
+        "key": "alt+t",
+        "command": "workbench.action.quickOpenTerm"
+    },
+    // ターミナル: ターミナルにフォーカス
+    {
+        "key": "alt+oem_period",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    // デバッグ: ブレークポイントの切り替え
+    {
+        "key": "alt+shift+\\",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
+    },
+    // デバッグ: デバッグ コンソールでの評価
+    {
+        "key": "alt+oem_2",
+        "command": "editor.debug.action.selectionToRepl",
+        "when": "inDebugMode"
+    },
+    // デバッグ: 条件付きブレークポイントの追加...
+    {
+        "key": "alt+oem_5",
+        "command": "editor.debug.action.conditionalBreakpoint"
+    },
+    // デバッグ: ウォッチに追加
+    {
+        "key": "alt+oem_minus",
+        "command": "editor.debug.action.selectionToWatch"
+    },
+    // 実行とデバッグ: ウォッチ式 ビューにフォーカスを置く
+    {
+        "key": "alt+w",
+        "command": "workbench.debug.action.focusWatchView",
+        "when": "inDebugMode"
+    },
+    // 実行とデバッグ: 変数 ビューにフォーカスを置く
+    {
+        "key": "alt+v",
+        "command": "workbench.debug.action.focusVariablesView",
+        "when": "inDebugMode"
+    },
+    // 大文字に変換
+    {
+        "key": "alt+shift+u",
+        "command": "editor.action.transformToUppercase",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    // 小文字に変換
+    {
+        "key": "alt+shift+l",
+        "command": "editor.action.transformToLowercase",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    // キャメル ケースに変換する
+    {
+        "key": "alt+shift+c",
+        "command": "editor.action.transformToCamelcase",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    // スネーク ケースに変換する
+    {
+        "key": "alt+shift+s",
+        "command": "editor.action.transformToSnakecase",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    // 表示: 最大化されるパネルの切り替え
+    {
+        "key": "alt+oem_7",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+oem_7",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "panelFocus"
+    },
+    /*
+     *  【VS Code】Ctrl+R キーで直近のコマンド履歴が表示できない((reverse-i-search)`':)
+     *  https://blog.kuds.win/vscode/run-recent-command/
+     *  過去に実行したコマンドを再実行するには
+     *  https://atmarkit.itmedia.co.jp/flinux/rensai/linuxtips/011bashbistory.html
+     */
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.terminal.runRecentCommand",
+        "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+    },
+    /*
+     *  マルチカーソルでCtrl系統が効かないのに対処
+     *  Ctrl-Left/Right not working for multiple cursors on Visual Studio Code
+     *  https://stackoverflow.com/questions/76412193/ctrl-left-right-not-working-for-multiple-cursors-on-visual-studio-code
+     *  https://github.com/microsoft/vscode/issues/31910
+     */
+    {
+        "key": "ctrl+right",
+        "command": "cursorWordEndRight",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-cursorWordEndRight",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "cursorWordEndRightSelect",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-cursorWordEndRightSelect",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "cursorWordEndLeft",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "cursorWordEndLeftSelect",
+        "when": "editorTextFocus && textInputFocus"
+    },
+    /*
+     *  Sort lines (ascending, case sensitive)の無効化
+     *  ブレークポイントの邪魔になるため
+     */
+    {
+        "key": "f9",
+        "command": "-sortLines.sortLines",
+        "when": "editorTextFocus"
+    },
+    /*
+     *  sqltools config
+     */
+    {
+        "key": "alt+s",
+        "command": "SQLTools.tableExplorer.focus"
+    },
+    {
+        "key": "alt+q alt+n",
+        "command": "SQLTools.newSqlFile"
+    },
+    {
+        "key": "alt+q alt+r",
+        "command": "SQLTools.executeQueryFromFile",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'sql'"
+    },
+    // {
+    //     "key": "alt+shift+f",
+    //     "command": "SQLTools.formatSql",
+    //     "when": "editorTextFocus && !editorReadonly && editorLangId == 'sql'"
+    // },
+    {
+        "key": "ctrl+e ctrl+b",
+        "command": "-SQLTools.formatSql",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'sql'"
+    },
+    {
+        "key": "alt+q alt+s",
+        "command": "SQLTools.executeQuery",
+        "when": "editorTextFocus && editorLangId == 'sql'"
+    },
+    {
+        "key": "ctrl+e ctrl+e",
+        "command": "-SQLTools.executeQuery",
+        "when": "editorTextFocus && editorLangId == 'sql'"
+    },
+    // C/C++ IntelliSense の再起動 (alt+:)
+    {
+        "key": "alt+oem_1",
+        "command": "C_Cpp.RestartIntelliSenseForFile",
+        "when": "editorTextFocus && editorLangId == 'cpp'"
+        // "when": "workspaceKeybindings.cpp_ws.enabled"
+    },
+    // Rust 関連
+    {
+        // シンタックスチェック
+        "key": "ctrl+r ctrl+c",
+        "command": "workbench.action.tasks.runTask",
+        "args": "cargo check && focusActiveEditor",
+        "when": "editorTextFocus && editorLangId == 'rust'"
+    },
+    {
+        // デバッグ: デバッグの開始
+        "key": "ctrl+r ctrl+d",
+        "command": "workbench.action.debug.start",
+        "args": "Current Source Debug",
+        "when": "editorTextFocus && editorLangId == 'rust'"
+    },
+    {
+        "key": "ctrl+r ctrl+r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "cargo run && focusActiveEditor",
+        "when": "editorTextFocus && editorLangId == 'rust'"
+    },
+]

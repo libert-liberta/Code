@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# コード補完
+extensions+=("bmewburn.vscode-intelephense-client")
+extensions+=("ecmel.vscode-html-css")
+
+# デバッグ
+extensions+=("xdebug.php-debug")
+
+# コードスニペット
+extensions+=("eiminsasete.apacheconf-snippets")
+
+# コードフォーマッター
+extensions+=("esbenp.prettier-vscode")
+# この拡張機能は単体では動かないのでphp-cs-fixerの設定が必要
+extensions+=("junstyle.php-cs-fixer")
+
+# シンタックスハイライト
+extensions+=("mrmlnc.vscode-apache")
+# extensions+=("aswinkumar863.smarty-template-support")

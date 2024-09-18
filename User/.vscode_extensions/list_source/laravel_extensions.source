@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# コード補完
+extensions+=("amiralizadeh9480.laravel-extra-intellisense")
+extensions+=("mohamedbenhida.laravel-intellisense")
+extensions+=("porifa.laravel-intelephense")
+
+# コードジャンプ
+# extensions+=("codingyu.laravel-goto-view")
+# extensions+=("ctf0.laravel-goto-controller")
+extensions+=("absszero.vscode-laravel-goto")
+
+# bladeテンプレートエンジンのスニペット と コードフォーマッター
+extensions+=("mikestead.dotenv")
+extensions+=("onecentlin.laravel-blade")
+extensions+=("onecentlin.laravel5-snippets")
+extensions+=("shufo.vscode-blade-formatter")

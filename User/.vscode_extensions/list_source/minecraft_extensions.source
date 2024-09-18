@@ -1,0 +1,5 @@
+#!/bin/bash
+
+extensions+=("johnheikens.intelliskript")
+extensions+=("johnheikens.skript")
+extensions+=("zz5840.minecraft-lang-colorizer")

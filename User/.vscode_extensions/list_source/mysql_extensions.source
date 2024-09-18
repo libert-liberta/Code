@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# MySQL
+extensions+=("mtxr.sqltools")
+extensions+=("mtxr.sqltools-driver-mysql")
+
+# MySQL シンタックスハイライト
+extensions+=("jakebathman.mysql-syntax")
+
+# SQL フォーマッター
+# extensions+=("cymonk.sql-formatter")

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+extensions+=("rust-lang.rust-analyzer")
+extensions+=("vadimcn.vscode-lldb")

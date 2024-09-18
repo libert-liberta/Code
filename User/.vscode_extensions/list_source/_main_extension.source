@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# 言語パック
+extensions+=("ms-ceintl.vscode-language-pack-ja")
+
+# VSCode remote
+extensions+=("ms-vscode-remote.remote-containers")
+extensions+=("ms-vscode-remote.remote-ssh")
+extensions+=("ms-vscode-remote.remote-ssh-edit")
+extensions+=("ms-vscode-remote.remote-wsl")
+extensions+=("ms-vscode-remote.vscode-remote-extensionpack")
+extensions+=("ms-vscode.remote-explorer")
+extensions+=("ms-vscode.remote-server")
+
+# git 関連
+extensions+=("eamodio.gitlens")
+# extensions+=("donjayamanne.githistory")
+
+# メモ
+extensions+=("alefragnani.bookmarks")
+extensions+=("amodio.restore-editors")
+extensions+=("patricklee.vsnotes")
+
+# コード補完
+# extensions+=("visualstudioexptteam.intellicode-api-usage-examples")
+# extensions+=("visualstudioexptteam.vscodeintellicode")
+extensions+=("christian-kohler.path-intellisense")
+extensions+=("tabnine.tabnine-vscode")
+
+# シンタックスハイライト
+extensions+=("emilast.logfilehighlighter")
+extensions+=("ibm.output-colorizer")
+extensions+=("iliazeus.vscode-ansi")
+extensions+=("mosapride.zenkaku")
+extensions+=("ms-vscode.powershell")
+extensions+=("oderwat.indent-rainbow")
+extensions+=("yzhang.markdown-all-in-one")
+
+# フォーマッター
+extensions+=("mikeburgh.xml-format")
+extensions+=("redhat.vscode-xml")
+
+# 編集補助
+extensions+=("cefour.pretty-edit")
+extensions+=("nemesv.copy-file-name")
+extensions+=("tyriar.sort-lines")
+
+# docker
+extensions+=("formulahendry.docker-explorer")
+extensions+=("formulahendry.docker-extension-pack")
+extensions+=("ms-azuretools.vscode-docker")
+
+# イベント追加
+extensions+=("gruntfuggly.triggertaskonsave")
+
+# ファイル操作・互換
+extensions+=("yy0931.save-as-root")
+extensions+=("kelvin.vscode-sshfs")
+extensions+=("tomoki1207.pdf")
+
+# 環境変数など(ビルドタスク、ラウンチ)
+extensions+=("tomoki1207.pdf")
+extensions+=("rioj7.command-variable")
+extensions+=("augustocdias.tasks-shell-input")
+

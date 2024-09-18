@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# これ一つ入れれば以下のものはほとんど入る
+extensions+=("ms-vscode.cpptools-extension-pack")
+extensions+=("ms-vscode.cmake-tools")
+extensions+=("ms-vscode.cpptools")
+
+# 以下はお好みで有効化
+extensions+=("ms-vscode.cpptools-themes")
+extensions+=("twxs.cmake")
+
+# clang
+# extensions+=("llvm-vs-code-extensions.vscode-clangd")

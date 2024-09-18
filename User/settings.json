@@ -1,0 +1,305 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+/*
+  "Ctrl + b": 1 文字戻ります。(backward-char)
+  "Ctrl + f": 1 文字進みます。(forward-char)
+  "Ctrl + p": 履歴リストを戻り、リストから前のコマンドを取り出します。(previous-history)
+  "Ctrl + n": 履歴リストを進め、リストから次のコマンドを取り出します。(next-history)
+  "←": 1 文字戻ります。(backward-char)
+  "→": 1 文字進みます。(forward-char)
+  "↑": 履歴リストを戻り、リストから前のコマンドを取り出します。(previous-history)
+  "↓": 履歴リストを進め、リストから次のコマンドを取り出します。(next-history)
+
+  "Ctrl + a": 現在行の先頭に移動します。(beginning-of-line)
+  "Ctrl + e": その行の末尾に移動します。(end-of-line)
+  "Home": 現在行の先頭に移動します。(beginning-of-line)
+  "End": その行の末尾に移動します。(end-of-line)
+  "Alt  + ←": 現在の語の先頭か前の語に戻ります。 単語は、英数字 ( 英文字と数字 ) で構成されています。(backward-word)
+  "Ctrl + ←": 現在の語の先頭か前の語に戻ります。 単語は、英数字 ( 英文字と数字 ) で構成されています。(backward-word)
+  "Alt  + →": 次の語の末尾に進みます。 単語は、英数字 ( 英文字と数字 ) で構成されています。(forward-word)
+  "Ctrl + →": 次の語の末尾に進みます。 単語は、英数字 ( 英文字と数字 ) で構成されています。(forward-word)
+
+  "Ctrl + h": カーソルの前にある文字を消去します。 数値引数があるときは、 消去されたテキストを削除リングに保存します。(backward-カーソルの下の文字を消去します。 ポイントが行の先頭にあり、 その行に文字がなく、 最後に入力した文字が delete-char にバインドされていない場合は EOF を返します。(delete-char))
+  "Ctrl + d": カーソルの下の文字を消去します。 ポイントが行の先頭にあり、 その行に文字がなく、 最後に入力した文字が delete-char にバインドされていない場合は EOF を返します。(delete-char)
+  "Backspace": カーソルの前にある文字を消去します。 数値引数があるときは、 消去されたテキストを削除リングに保存します。(backward-カーソルの下の文字を消去します。 ポイントが行の先頭にあり、 その行に文字がなく、 最後に入力した文字が delete-char にバインドされていない場合は EOF を返します。(delete-char))
+  "Delete": カーソルの下の文字を消去します。 ポイントが行の先頭にあり、 その行に文字がなく、 最後に入力した文字が delete-char にバインドされていない場合は EOF を返します。(delete-char)
+  "Ctrl + k": 現在のカーソルの位置から行末までのテキストを削除 (kill) します。(kill-line)
+  "Ctrl + Delete": カーソルから現在の語の末尾まで、 単語間の場合は次の語の末尾までを消去します。 単語境界は、 forward-word で使用するものと同じです。(kill-word)
+  "Ctrl + u": ポイントから行頭まで後方に削除します。 削除されたテキストは削除リングに保存されます。(unix-line-discard)
+  "Ctrl + w": 空白を単語境界として使用し、カーソルの前のワードを削除します。 単語境界は backward-カーソルから現在の語の末尾まで、 単語間の場合は次の語の末尾までを消去します。 単語境界は、 forward-word で使用するものと同じです。(kill-word) とは異なります。(unix-word-rubout)
+
+  "Ctrl + l": 現在の行を画面の最上位に残して画面をクリアします。 引数がある場合は、画面をクリアせずに現在の行をリフレッシュします。(clear-screen)
+  "Ctrl + i": ポイントの前のテキストで補完 (completion) を実行します。 実際の補完はアプリケーションに固有です。 たとえば、 bash は、それぞれ、 変数 ( テキストが $ で始まる場合 ) 、 ユーザ名 ( テキストが ~ で始まる場合 ) 、 ホスト名 ( テキストが @ で始まる場合 ) 、 コマンド ( エイリアスと関数を含む場合 ) としてテキストを扱い、補完を実行します。 これらに当てはまらない場合は ファイル名の補完が実行されます。 一方、 gdb ではプログラムの関数と変数の補完が認められており、 特定の状況でのみファイル名補完が試みられます。(complete)
+  "Ctrl + r": 現在の行から必要なだけ履歴を「上へ」移動しながら後方検索します。 これは増分検索です。(reverse-search-history)
+  "Ctrl + s": 現在の行から必要なだけ履歴を「下へ」移動しながら前方検索します。 これは増分検索です。(forward-search-history)
+
+  "Ctrl + t": ポイントの前の文字をポイントの文字の後にドラッグします。 ポイントも後ろに移動します。 ポイントが行末にある場合は、 ポイントの前の 2 つの文字を入れ替えます。 負の引数は動作しません。(transpose-chars)
+  "Ctrl + _": 各行で個別に記憶される、増分取り消し (incremental undo)です。(undo)
+  "Ctrl + y": 削除リングの最上位をカーソル位置のバッファにヤンクします。(yank)
+ */
+{
+  // キーバインドがシェルに送信されず、代わりに常に Code で処理されるコマンド ID のセット。
+  // これにより、ターミナルがフォーカスされていない場合と同じ動作をするシェルによって通常使用されるキーバインドを使用できるようになります。
+  // 例: Ctrl+p で Quick Open を起動します。
+  "terminal.integrated.commandsToSkipShell": [
+    "editor.action.toggleTabFocusMode",
+    "workbench.action.debug.continue",
+    "workbench.action.debug.pause",
+    "workbench.action.debug.restart",
+    "workbench.action.debug.run",
+    "workbench.action.debug.start",
+    "workbench.action.debug.stepInto",
+    "workbench.action.debug.stepOut",
+    "workbench.action.debug.stepOver",
+    "workbench.action.debug.stop",
+    "workbench.action.firstEditorInGroup",
+    "workbench.action.focusActiveEditorGroup",
+    "workbench.action.focusEighthEditorGroup",
+    "workbench.action.focusFifthEditorGroup",
+    "workbench.action.focusFirstEditorGroup",
+    "workbench.action.focusFourthEditorGroup",
+    "workbench.action.focusLastEditorGroup",
+    "workbench.action.focusSecondEditorGroup",
+    "workbench.action.focusSeventhEditorGroup",
+    "workbench.action.focusSixthEditorGroup",
+    "workbench.action.focusThirdEditorGroup",
+    "workbench.action.lastEditorInGroup",
+    "workbench.action.navigateDown",
+    "workbench.action.navigateLeft",
+    "workbench.action.navigateRight",
+    "workbench.action.navigateUp",
+    "workbench.action.openNextRecentlyUsedEditorInGroup",
+    "workbench.action.openPreviousRecentlyUsedEditorInGroup",
+    "-workbench.action.quickOpen",
+    "-workbench.action.quickOpenPreviousEditor",
+    "-workbench.action.quickOpenView",
+    "workbench.action.showCommands",
+    "workbench.action.tasks.build",
+    "workbench.action.tasks.restartTask",
+    "workbench.action.tasks.runTask",
+    "workbench.action.tasks.showLog",
+    "workbench.action.tasks.showTasks",
+    "workbench.action.tasks.terminate",
+    "workbench.action.tasks.test",
+    "workbench.action.terminal.clear",
+    "workbench.action.terminal.clearSelection",
+    "workbench.action.terminal.copySelection",
+    "workbench.action.terminal.deleteWordLeft",
+    "workbench.action.terminal.deleteWordRight",
+    "workbench.action.terminal.focus",
+    "workbench.action.terminal.focusAtIndex1",
+    "workbench.action.terminal.focusAtIndex2",
+    "workbench.action.terminal.focusAtIndex3",
+    "workbench.action.terminal.focusAtIndex4",
+    "workbench.action.terminal.focusAtIndex5",
+    "workbench.action.terminal.focusAtIndex6",
+    "workbench.action.terminal.focusAtIndex7",
+    "workbench.action.terminal.focusAtIndex8",
+    "workbench.action.terminal.focusAtIndex9",
+    "workbench.action.terminal.focusFindWidget",
+    "workbench.action.terminal.focusNext",
+    "workbench.action.terminal.focusNextPane",
+    "workbench.action.terminal.focusPrevious",
+    "workbench.action.terminal.focusPreviousPane",
+    "workbench.action.terminal.hideFindWidget",
+    "workbench.action.terminal.kill",
+    "workbench.action.terminal.moveToLineEnd",
+    "workbench.action.terminal.moveToLineStart",
+    "workbench.action.terminal.new",
+    "workbench.action.terminal.newInActiveWorkspace",
+    "workbench.action.terminal.paste",
+    "workbench.action.terminal.resizePaneDown",
+    "workbench.action.terminal.resizePaneLeft",
+    "workbench.action.terminal.resizePaneRight",
+    "workbench.action.terminal.resizePaneUp",
+    "workbench.action.terminal.runActiveFile",
+    "workbench.action.terminal.runSelectedText",
+    "workbench.action.terminal.scrollDown",
+    "workbench.action.terminal.scrollDownPage",
+    "workbench.action.terminal.scrollToBottom",
+    "workbench.action.terminal.scrollToNextCommand",
+    "workbench.action.terminal.scrollToPreviousCommand",
+    "workbench.action.terminal.scrollToTop",
+    "workbench.action.terminal.scrollUp",
+    "workbench.action.terminal.scrollUpPage",
+    "workbench.action.terminal.selectAll",
+    "workbench.action.terminal.selectToNextCommand",
+    "workbench.action.terminal.selectToNextLine",
+    "workbench.action.terminal.selectToPreviousCommand",
+    "workbench.action.terminal.selectToPreviousLine",
+    "workbench.action.terminal.split",
+    "workbench.action.terminal.splitInActiveWorkspace",
+    "workbench.action.terminal.toggleTerminal",
+    "workbench.action.togglePanel",
+    // ここから追加したコマンド
+    "workbench.action.toggleMaximizedPanel",
+    "-workbench.action.splitEditor",
+  ],
+  "workbench.startupEditor": "none",
+  // エディターで空白文字を表示する方法を制御します。
+  "editor.renderWhitespace": "all",
+  // ターミナルのカーソルを点滅させるかどうかを制御します。
+  "terminal.integrated.cursorBlinking": true,
+  // Windows でターミナルが使用するシェルのパス。
+  "terminal.integrated.defaultProfile.windows": "WSL",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": [
+        "--login",
+        "-i"
+      ]
+    },
+    "WSL": {
+      "path": "C:\\WINDOWS\\System32\\bash.exe"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
+  // どのターミナルを Windows で実行するかをカスタマイズします。
+  // https://github.com/alacritty/alacritty
+  "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
+  // Git Bash
+  // "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
+  // tabby download https://github.com/Eugeny/tabby
+  // "terminal.external.windowsExec": "C:\\Tabby\\Tabby.exe",
+  "typescript.check.npmIsInstalled": false,
+  "extensions.ignoreRecommendations": false,
+  "git.autofetch": true,
+  "editor.tabCompletion": "on",
+  // エディターで制御文字を表示する必要があるかどうかを制御します
+  "editor.renderControlCharacters": true,
+  //入力中に構文チェックをする
+  "php.validate.run": "onType",
+  // 他の修正候補と一緒にスニペットを表示するかどうか、およびその並び替えの方法を制御します。
+  "editor.snippetSuggestions": "top",
+  "git.enableSmartCommit": true,
+  // PHP 実行可能ファイルを指定します。
+  "php.validate.executablePath": "C:\\php\\php.exe",
+  // 末尾に改行を入れます。
+  "html.format.endWithNewline": true,
+  "files.eol": "\n",
+  "files.associations": {
+    "*.cron": "shellscript"
+  },
+  // 階層リンク ナビゲーションを有効/無効にします
+  "breadcrumbs.enabled": true,
+  // ファイルを保存するときにフォーマットしてください。フォーマッタを使用可能にして、ファイルを自動保存せず、エディターをシャットダウンしないでください。
+  "editor.formatOnSave": true,
+  // 組み込みの PHP 言語候補機能を有効にするかどうかを制御します。このサポートによって、PHP グローバルと変数の候補が示されます。
+  "php.suggest.basic": false,
+  // 有効にした場合、拡張機能の更新を自動的にインストールします。更新は Microsoft のオンライン サービスから取得されます。
+  "extensions.autoUpdate": false,
+  // 有効にした場合、拡張機能の更新を自動的に確認します。拡張機能に更新がある場合は、拡張機能ビューで古くなった拡張機能として表示されます。更新は Microsoft オンライン サービスから取得されます。
+  "extensions.autoCheckUpdates": false,
+  /*
+   * intelephense config
+   */
+  "intelephense.file.maxSize": 10000000,
+  "intelephense.formatProvider.enable": false,
+  "intelephense.diagnosticsProvider.debounce": 100,
+  "diffEditor.ignoreTrimWhitespace": false,
+  /*
+   * フォント設定
+   */
+  // "editor.fontFamily": "Noto Sans Mono CJK JP Regular",
+  // "editor.fontWeight": "400",
+  "editor.fontFamily": "source han code jp",
+  "search.searchOnType": false,
+  "editor.insertSpaces": false,
+  "editor.copyWithSyntaxHighlighting": false,
+  "git.confirmSync": false,
+  "files.autoGuessEncoding": true,
+  "tabnine.experimentalAutoImports": true, // Access Token Secret
+  // SQLToolsの結果をボトムペインに表示させたい
+  // https://github.com/mtxr/vscode-sqltools/issues/280
+  // https://qiita.com/12345/items/41283e759e99ece85ced
+  "workbench.editor.openSideBySideDirection": "down",
+  "html.format.wrapAttributes": "preserve",
+  "html.format.wrapLineLength": 0,
+  "sshfs.configs": [],
+  "workbench.editorAssociations": {
+    "*.xml": "default",
+    "*.db": "sqlite-viewer.option",
+    "*.zip": "default"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // vsnotes
+  "vsnotes.defaultNotePath": "~/vsnotes",
+  "vsnotes.defaultNoteTitle": "{title}_{dt}.{ext}",
+  "vsnotes.tokens": [
+    {
+      "type": "datetime",
+      "token": "{dt}",
+      "format": "YYYY-MM-DD_HHmm",
+      "description": "Insert formatted datetime."
+    },
+    {
+      "type": "title",
+      "token": "{title}",
+      "description": "Insert note title from input box.",
+      "format": "Untitled"
+    },
+    {
+      "type": "extension",
+      "token": "{ext}",
+      "description": "Insert file extension.",
+      "format": "md"
+    },
+  ],
+  "vsnotes.defaultSnippet": {
+    "langId": "markdown",
+    "name": "vsnote_template_default"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  // コメント内の文字を Unicode 強調表示の対象にするかどうかを制御します。
+  "editor.unicodeHighlight.includeComments": true,
+  // 基本以外のすべての ASCII 文字を強調表示するかどうかを制御します。U+0020 から U+007Eの間の文字、Tab、改行コード、行頭復帰のみが基本 ASCII と見なされます。
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "remote.SSH.remotePlatform": {
+    "metis": "linux",
+    "DC53427HYE": "linux",
+    "deskmini-x300": "linux",
+    "tech-boost-ec2": "linux"
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  // 統合ターミナルがプロファイルを読まないときはこれを試す
+  // https://stackoverflow.com/questions/73315094/wsl-bash-in-visual-studio-code-running-bashrc-but-not-bash-profile
+  "terminal.integrated.shellIntegration.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "editor.accessibilitySupport": "on",
+  "triggerTaskOnSave.on": false,
+  "sqltools.sessionFilesFolder": ".sqltools",
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "terminal.integrated.allowChords": false,
+  "git.allowForcePush": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+}
