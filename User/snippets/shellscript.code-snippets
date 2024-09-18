@@ -1,0 +1,134 @@
+{
+	"shebang": {
+		"prefix": "shebang",
+		"scope": "shellscript",
+		"body": [
+			"#!/bin/bash",
+			"$0",
+		],
+		"description": "Bash Shebang Snippets Template",
+	},
+	"orgshebang": {
+		"prefix": "orgshebang",
+		"scope": "shellscript",
+		"body": [
+			"#!/bin/sh",
+			"$0",
+		],
+		"description": "Sh Shebang Snippets Template",
+	},
+	"zshebang": {
+		"prefix": "zshebang",
+		"scope": "shellscript",
+		"body": [
+			"#!/bin/zsh",
+			"$0",
+		],
+		"description": "Zsh Shebang Snippets Template",
+	},
+	"if": {
+		"prefix": "if",
+		"scope": "shellscript",
+		"body": [
+			"if [ $0 ]; then",
+			"\t// ",
+			"fi",
+		],
+		"description": "if Code Snippets Template",
+	},
+	"ifelse": {
+		"prefix": "ifelse",
+		"scope": "shellscript",
+		"body": [
+			"if [ $0 ]; then",
+			"\t// ",
+			"else",
+			"\t// ",
+			"fi",
+		],
+		"description": "if else Code Snippets Template",
+	},
+	"elseif": {
+		"prefix": "elseif",
+		"scope": "shellscript",
+		"body": [
+			"elif [ $0 ]; then",
+		],
+		"description": "else if Code Snippets Template",
+	},
+	"for": {
+		"prefix": "for",
+		"scope": "shellscript",
+		"body": [
+			"for item in \"${$0[@]}\";",
+			"do",
+			"\t// ",
+			"done",
+		],
+		"description": "for Code Snippets Template",
+	},
+	"iequal": {
+		"prefix": "iequal",
+		"scope": "shellscript",
+		"body": [
+			"-eq",
+		],
+		"description": "A = B (numeric equal AとBが等しければ true)",
+	},
+	"inotEqual": {
+		"prefix": "inotEqual",
+		"scope": "shellscript",
+		"body": [
+			"-ne",
+		],
+		"description": "A != B (numeric not equal AとBが等しくなければ true)",
+	},
+	"igreaterThan": {
+		"prefix": "igreaterThan",
+		"scope": "shellscript",
+		"body": [
+			"-gt",
+		],
+		"description": "A > B (numeric greater than AがBより大なら true)",
+	},
+	"igreaterThanOrEqual": {
+		"prefix": "igreaterThanOrEqual",
+		"scope": "shellscript",
+		"body": [
+			"-ge",
+		],
+		"description": "A >= B (numeric greater than or equal AがBより以上なら true)",
+	},
+	"ilessThan": {
+		"prefix": "ilessThan",
+		"scope": "shellscript",
+		"body": [
+			"-lt",
+		],
+		"description": "A < B (numeric less than AがBより小なら true)",
+	},
+	"ilessThanOrRqual": {
+		"prefix": "ilessThanOrRqual",
+		"scope": "shellscript",
+		"body": [
+			"-le",
+		],
+		"description": "A <= B (numeric less than or equal AがB以下なら true)",
+	},
+	"slengthZero": {
+		"prefix": "slengthZero",
+		"scope": "shellscript",
+		"body": [
+			"-z",
+		],
+		"description": "-z A (string length zero Aの文字列長が0なら true)",
+	},
+	"slengthNotZero": {
+		"prefix": "slengthNotZero",
+		"scope": "shellscript",
+		"body": [
+			"-n",
+		],
+		"description": "-n A (string length not zero Aの文字列長が0でないなら true)",
+	},
+}

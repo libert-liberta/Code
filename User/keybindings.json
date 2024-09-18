@@ -295,7 +295,6 @@
     },
     // Rust 関連
     {
-        // シンタックスチェック
         "key": "ctrl+r ctrl+c",
         "command": "workbench.action.tasks.runTask",
         "args": "cargo check && focusActiveEditor",

@@ -1,0 +1,17 @@
+{
+	"code_snippets": {
+		"prefix": "code_snippets",
+		"scope": "snippets",
+		"body": [
+			"\"$1\": {",
+			"\t\"prefix\": \"$1\",",
+			"\t\"scope\": \"$2\",",
+			"\t\"body\": [",
+			"\t\t\"$3\",",
+			"\t],",
+			"\t\"description\": \"Generated Code Snippets Template\",",
+			"},"
+		],
+		"description": "Code Snippets Default Template",
+	},
+}
