@@ -31,7 +31,7 @@
 		"scope": "shellscript",
 		"body": [
 			"if [ $0 ]; then",
-			"\t// ",
+			"\t# ",
 			"fi",
 		],
 		"description": "if Code Snippets Template",
@@ -41,9 +41,9 @@
 		"scope": "shellscript",
 		"body": [
 			"if [ $0 ]; then",
-			"\t// ",
+			"\t# ",
 			"else",
-			"\t// ",
+			"\t# ",
 			"fi",
 		],
 		"description": "if else Code Snippets Template",
@@ -60,9 +60,9 @@
 		"prefix": "for",
 		"scope": "shellscript",
 		"body": [
-			"for item in \"${$0[@]}\";",
+			"for $2 in \"${$1[@]}\";",
 			"do",
-			"\t// ",
+			"\t# $0",
 			"done",
 		],
 		"description": "for Code Snippets Template",
@@ -130,5 +130,13 @@
 			"-n",
 		],
 		"description": "-n A (string length not zero Aの文字列長が0でないなら true)",
+	},
+	"iff": {
+		"prefix": "iff",
+		"scope": "shellscript",
+		"body": [
+			"if [ -f $1 ]; then source $1 ; fi",
+		],
+		"description": "if file exist",
 	},
 }

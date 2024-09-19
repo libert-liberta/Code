@@ -1,0 +1,4 @@
+#!/bin/bash
+
+extensions+=("mads-hartmann.bash-ide-vscode")
+extensions+=("rogalmic.bash-debug")
