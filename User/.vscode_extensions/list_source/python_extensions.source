@@ -1,8 +1,0 @@
-#!/bin/bash
-
-extensions+=("donjayamanne.python-extension-pack")
-extensions+=("donjayamanne.python-environment-manager")
-extensions+=("kevinrose.vsc-python-indent")
-extensions+=("ms-python.debugpy")
-extensions+=("ms-python.python")
-extensions+=("ms-python.vscode-pylance")

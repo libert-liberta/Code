@@ -1,0 +1,9 @@
+# MySQL
+mtxr.sqltools
+mtxr.sqltools-driver-mysql
+
+# MySQL シンタックスハイライト
+jakebathman.mysql-syntax
+
+# SQL フォーマッター
+# cymonk.sql-formatter

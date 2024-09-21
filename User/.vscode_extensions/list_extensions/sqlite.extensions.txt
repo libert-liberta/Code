@@ -1,0 +1,6 @@
+# sqlite
+alexcvzz.vscode-sqlite
+qwtel.sqlite-viewer
+
+# SQL フォーマッター
+# cymonk.sql-formatter

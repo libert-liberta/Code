@@ -1,0 +1,7 @@
+# これ一つ入れれば以下のものはほとんど入る
+vscjava.vscode-java-pack
+redhat.java
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-test
+vscjava.vscode-maven

@@ -1,0 +1,3 @@
+johnheikens.intelliskript
+johnheikens.skript
+zz5840.minecraft-lang-colorizer

@@ -1,0 +1,11 @@
+# これ一つ入れれば以下のものはほとんど入る
+ms-vscode.cpptools-extension-pack
+# ms-vscode.cmake-tools
+# ms-vscode.cpptools
+
+# 以下はお好みで有効化
+# ms-vscode.cpptools-themes
+# twxs.cmake
+
+# clang
+# llvm-vs-code-extensions.vscode-clangd

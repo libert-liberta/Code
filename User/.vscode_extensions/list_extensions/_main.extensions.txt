@@ -1,0 +1,63 @@
+# 言語パック
+ms-ceintl.vscode-language-pack-ja
+
+# VSCode remote
+ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.remote-wsl
+ms-vscode-remote.vscode-remote-extensionpack
+ms-vscode.remote-explorer
+ms-vscode.remote-server
+
+# git 関連
+eamodio.gitlens
+# donjayamanne.githistory
+
+# メモ
+alefragnani.bookmarks
+amodio.restore-editors
+patricklee.vsnotes
+
+# コード補完
+# visualstudioexptteam.intellicode-api-usage-examples
+# visualstudioexptteam.vscodeintellicode
+christian-kohler.path-intellisense
+tabnine.tabnine-vscode
+
+# シンタックスハイライト
+emilast.logfilehighlighter
+ibm.output-colorizer
+iliazeus.vscode-ansi
+mosapride.zenkaku
+ms-vscode.powershell
+oderwat.indent-rainbow
+yzhang.markdown-all-in-one
+
+# フォーマッター
+mikeburgh.xml-format
+redhat.vscode-xml
+
+# 編集補助
+cefour.pretty-edit
+nemesv.copy-file-name
+tyriar.sort-lines
+
+# docker
+ms-vscode-remote.remote-containers
+# formulahendry.docker-explorer
+# formulahendry.docker-extension-pack
+# ms-azuretools.vscode-docker
+
+# イベント追加
+gruntfuggly.triggertaskonsave
+
+# ファイル操作・互換
+yy0931.save-as-root
+kelvin.vscode-sshfs
+tomoki1207.pdf
+
+# 環境変数など(ビルドタスク、ラウンチ)
+tomoki1207.pdf
+rioj7.command-variable
+augustocdias.tasks-shell-input

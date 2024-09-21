@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# これ一つ入れれば以下のものはほとんど入る
-extensions+=("vscjava.vscode-java-pack")
-extensions+=("redhat.java")
-extensions+=("vscjava.vscode-java-debug")
-extensions+=("vscjava.vscode-java-dependency")
-extensions+=("vscjava.vscode-java-test")
-extensions+=("vscjava.vscode-maven")

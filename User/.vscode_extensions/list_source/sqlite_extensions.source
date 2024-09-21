@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# sqlite
-extensions+=("alexcvzz.vscode-sqlite")
-extensions+=("qwtel.sqlite-viewer")
-
-# SQL フォーマッター
-# extensions+=("cymonk.sql-formatter")

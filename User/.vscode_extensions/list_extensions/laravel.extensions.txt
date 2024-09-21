@@ -1,0 +1,15 @@
+# コード補完
+amiralizadeh9480.laravel-extra-intellisense
+mohamedbenhida.laravel-intellisense
+porifa.laravel-intelephense
+
+# コードジャンプ
+# codingyu.laravel-goto-view
+# ctf0.laravel-goto-controller
+absszero.vscode-laravel-goto
+
+# bladeテンプレートエンジンのスニペット と コードフォーマッター
+mikestead.dotenv
+onecentlin.laravel-blade
+onecentlin.laravel5-snippets
+shufo.vscode-blade-formatter

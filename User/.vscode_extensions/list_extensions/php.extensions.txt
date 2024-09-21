@@ -1,0 +1,18 @@
+# コード補完
+bmewburn.vscode-intelephense-client
+ecmel.vscode-html-css
+
+# デバッグ
+xdebug.php-debug
+
+# コードスニペット
+eiminsasete.apacheconf-snippets
+
+# コードフォーマッター
+esbenp.prettier-vscode
+# この拡張機能は単体では動かないのでphp-cs-fixerの設定が必要
+junstyle.php-cs-fixer
+
+# シンタックスハイライト
+mrmlnc.vscode-apache
+# aswinkumar863.smarty-template-support
