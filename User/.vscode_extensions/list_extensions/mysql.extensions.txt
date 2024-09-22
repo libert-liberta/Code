@@ -3,7 +3,7 @@ mtxr.sqltools
 mtxr.sqltools-driver-mysql
 
 # MySQL シンタックスハイライト
-jakebathman.mysql-syntax
+# jakebathman.mysql-syntax
 
 # SQL フォーマッター
 # cymonk.sql-formatter

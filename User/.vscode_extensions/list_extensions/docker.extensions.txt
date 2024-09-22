@@ -1,0 +1,5 @@
+# docker
+ms-vscode-remote.remote-containers
+# formulahendry.docker-explorer
+# formulahendry.docker-extension-pack
+# ms-azuretools.vscode-docker

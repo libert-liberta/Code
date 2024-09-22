@@ -1,6 +1,12 @@
-donjayamanne.python-extension-pack
-donjayamanne.python-environment-manager
-kevinrose.vsc-python-indent
-ms-python.debugpy
+# donjayamanne.python-extension-pack
+# ↑これをインストールすると以下が入る
 ms-python.python
+# batisteo.vscode-django
+# njpwerner.autodocstring
+donjayamanne.python-environment-manager
+# VisualStudioExptTeam.vscodeintellicode
+kevinrose.vsc-python-indent
+# wholroyd.jinja
+
+ms-python.debugpy
 ms-python.vscode-pylance

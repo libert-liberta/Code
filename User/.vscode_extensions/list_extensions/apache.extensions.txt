@@ -1,0 +1,2 @@
+eiminsasete.apacheconf-snippets
+mrmlnc.vscode-apache

@@ -1,0 +1,3 @@
+# フォーマッター
+# mikeburgh.xml-format
+redhat.vscode-xml

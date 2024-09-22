@@ -1,7 +1,7 @@
 # コード補完
 amiralizadeh9480.laravel-extra-intellisense
-mohamedbenhida.laravel-intellisense
 porifa.laravel-intelephense
+# mohamedbenhida.laravel-intellisense # Last released 2021-01-11, 06:16:56
 
 # コードジャンプ
 # codingyu.laravel-goto-view
@@ -9,7 +9,7 @@ porifa.laravel-intelephense
 absszero.vscode-laravel-goto
 
 # bladeテンプレートエンジンのスニペット と コードフォーマッター
-mikestead.dotenv
 onecentlin.laravel-blade
-onecentlin.laravel5-snippets
 shufo.vscode-blade-formatter
+# mikestead.dotenv
+# onecentlin.laravel5-snippets

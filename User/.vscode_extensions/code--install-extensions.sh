@@ -8,18 +8,7 @@ if [ "$#" -eq 0 ]; then
 	# 以下のディレクトリの.sourceファイルに拡張機能の一覧がまとめてある
 	# インストールしたいカテゴリの拡張機能の行をコメントアウトして実行
 	# ls -1 list_extensions | xargs -I extension_source echo "extensionsListFiles+=("extension_source")"
-	extensionsListFiles+=(_main.extensions.txt)
-	extensionsListFiles+=(cpp.extensions.txt)
-	extensionsListFiles+=(golang.extensions.txt)
-	extensionsListFiles+=(java.extensions.txt)
-	extensionsListFiles+=(laravel.extensions.txt)
-	extensionsListFiles+=(minecraft.extensions.txt)
-	extensionsListFiles+=(mysql.extensions.txt)
-	extensionsListFiles+=(php.extensions.txt)
-	extensionsListFiles+=(python.extensions.txt)
-	extensionsListFiles+=(rust.extensions.txt)
-	extensionsListFiles+=(shellscript.extensions.txt)
-	extensionsListFiles+=(sqlite.extensions.txt)
+	source extensions_list.sh
 else
 	EXTENSION_SOURCE_PATH=""
 	extensionsListFiles+=($1)

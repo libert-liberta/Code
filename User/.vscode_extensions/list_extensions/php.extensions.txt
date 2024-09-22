@@ -2,17 +2,16 @@
 bmewburn.vscode-intelephense-client
 ecmel.vscode-html-css
 
-# デバッグ
-xdebug.php-debug
 
-# コードスニペット
-eiminsasete.apacheconf-snippets
+# xdebug.php-pack
+# ↑これをインストールすると以下が入る
+xdebug.php-debug
+# zobo.php-intellisense
 
 # コードフォーマッター
-esbenp.prettier-vscode
+# esbenp.prettier-vscode
 # この拡張機能は単体では動かないのでphp-cs-fixerの設定が必要
-junstyle.php-cs-fixer
+# junstyle.php-cs-fixer
 
 # シンタックスハイライト
-mrmlnc.vscode-apache
 # aswinkumar863.smarty-template-support
