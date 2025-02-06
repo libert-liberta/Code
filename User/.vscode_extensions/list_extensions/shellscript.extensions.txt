@@ -1,2 +1,6 @@
 mads-hartmann.bash-ide-vscode
 rogalmic.bash-debug
+shakram02.bash-beautify
+ShellCheck
+foxundermoon.shell-format
+leosj29.bash-sh-runner

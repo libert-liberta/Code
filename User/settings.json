@@ -215,7 +215,7 @@
   "intelephense.file.maxSize": 10000000,
   "intelephense.formatProvider.enable": false,
   "intelephense.diagnosticsProvider.debounce": 100,
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   /*
    * フォント設定
    */
@@ -241,7 +241,7 @@
     "*.zip": "default"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   // vsnotes
   "vsnotes.defaultNotePath": "~/vsnotes",
