@@ -197,7 +197,8 @@
   "html.format.endWithNewline": true,
   "files.eol": "\n",
   "files.associations": {
-    "*.cron": "shellscript"
+    "*.cron": "shellscript",
+    "*.config": "ssh_config"
   },
   // 階層リンク ナビゲーションを有効/無効にします
   "breadcrumbs.enabled": true,
@@ -283,7 +284,9 @@
     "metis": "linux",
     "DC53427HYE": "linux",
     "deskmini-x300": "linux",
-    "tech-boost-ec2": "linux"
+    "tech-boost-ec2": "linux",
+    "challtia.vps.conoha.jp-test-challtia": "linux",
+    "conoha.jp-challtia-test-malice-mischief": "linux"
   },
   "editor.unicodeHighlight.ambiguousCharacters": false,
   // 統合ターミナルがプロファイルを読まないときはこれを試す
@@ -301,5 +304,19 @@
   "git.allowForcePush": true,
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  "git.replaceTagsWhenPull": true,
+  "livePreview.debugOnExternalPreview": true,
+  "livePreview.autoRefreshPreview": "Never",
+  "livePreview.customExternalBrowser": "Chrome",
+  "git.ignoreRebaseWarning": true,
+  "vsnotes.commitPushDefaultCommitMessage": "VS Notes Commit",
+  "vsnotes.commitPushShellCommand": "git add -A && git commit -m \"{msg}\"",
+  "[shellscript]": {
+    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
   },
 }

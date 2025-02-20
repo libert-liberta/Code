@@ -4,12 +4,12 @@
 		{
 			"detail": "VSCode command",
 			"label": "terminal.focus",
-			"command": "${command:workbench.action.terminal.focus}"
+			"command": "${command:workbench.action.terminal.focus}",
 		},
 		{
 			"detail": "VSCode command",
 			"label": "focusActiveEditorGroup",
-			"command": "${command:workbench.action.focusActiveEditorGroup}",
+			"command": "${command:workbench.action.focusActiveEditorGroup}"
 		},
 		{
 			"detail": "VSCode command",
