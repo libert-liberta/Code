@@ -313,4 +313,14 @@
         "args": "cargo run && focusActiveEditor",
         "when": "editorTextFocus && editorLangId == 'rust'"
     },
+    // 【VSCode】ホットキーで.mdの改行ができるようにする
+    // https://qiita.com/P-man_Brown/items/2e78f5528ba8e1277d6d
+    {
+        "key": "shift+enter",
+        "command": "type",
+        "args": {
+            "text": "  \n"
+        },
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    }
 ]

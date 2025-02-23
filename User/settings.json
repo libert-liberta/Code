@@ -241,9 +241,6 @@
     "*.db": "sqlite-viewer.option",
     "*.zip": "default"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
   // vsnotes
   "vsnotes.defaultNotePath": "~/vsnotes",
   "vsnotes.defaultNoteTitle": "{title}_{dt}.{ext}",
@@ -277,9 +274,6 @@
   // 基本以外のすべての ASCII 文字を強調表示するかどうかを制御します。U+0020 から U+007Eの間の文字、Tab、改行コード、行頭復帰のみが基本 ASCII と見なされます。
   "editor.unicodeHighlight.nonBasicASCII": false,
   "bracket-pair-colorizer-2.depreciation-notice": false,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "remote.SSH.remotePlatform": {
     "metis": "linux",
     "DC53427HYE": "linux",
@@ -296,15 +290,9 @@
   "editor.accessibilitySupport": "on",
   "triggerTaskOnSave.on": false,
   "sqltools.sessionFilesFolder": ".sqltools",
-  "[blade]": {
-    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
-  },
   "git.openRepositoryInParentFolders": "always",
   "terminal.integrated.allowChords": false,
   "git.allowForcePush": true,
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
-  },
   "remote.autoForwardPortsSource": "hybrid",
   "security.allowedUNCHosts": [
     "wsl.localhost"
@@ -316,7 +304,25 @@
   "git.ignoreRebaseWarning": true,
   "vsnotes.commitPushDefaultCommitMessage": "VS Notes Commit",
   "vsnotes.commitPushShellCommand": "git add -A && git commit -m \"{msg}\"",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
   "[shellscript]": {
     "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+  },
+  // VSCodeでmarkdownのときのみ、行末trimをしない設定
+  // https://qiita.com/arrowKato/items/9699ad65c1e4e4c58c10
+  "[markdown]": {
+    // markdownは 行末の半角スペース2つで改行なので、消さないようにする
+    "files.trimTrailingWhitespace": false,
   },
 }
