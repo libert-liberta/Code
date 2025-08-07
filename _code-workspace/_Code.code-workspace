@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"iliazeus.vscode-ansi",
+			"shakram02.bash-beautify",
+			"rogalmic.bash-debug",
+			"mads-hartmann.bash-ide-vscode",
+			"alefragnani.bookmarks",
+			"rioj7.command-variable",
+			"nemesv.copy-file-name",
+			"ms-azuretools.vscode-docker",
+			"eamodio.gitlens",
+			"oderwat.indent-rainbow",
+			"ms-ceintl.vscode-language-pack-ja",
+			"emilast.logfilehighlighter",
+			"yzhang.markdown-all-in-one",
+			"ibm.output-colorizer",
+			"christian-kohler.path-intellisense",
+			"cefour.pretty-edit",
+			"yy0931.save-as-root",
+			"foxundermoon.shell-format",
+			"tyriar.sort-lines",
+			"mtxr.sqltools",
+			"kelvin.vscode-sshfs",
+			"augustocdias.tasks-shell-input",
+			"patricklee.vsnotes",
+			"mosapride.zenkaku",
+			// "tabnine.tabnine-vscode",
+			"ms-vscode-remote.vscode-remote-extensionpack",
+			"ms-azuretools.vscode-containers"
+		]
+	}
+}

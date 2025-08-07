@@ -3,6 +3,8 @@ code.lock
 languagepacks.json
 rapid_render.json
 storage.json
+DIPS
+DIPS-wal
 
 # directory
 Backups
