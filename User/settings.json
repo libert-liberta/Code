@@ -174,8 +174,10 @@
     }
   },
   // どのターミナルを Windows で実行するかをカスタマイズします。
+  // Windowsターミナル
+  "terminal.external.windowsExec": "C:\\Users\\%USERNAME%\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
   // https://github.com/alacritty/alacritty
-  "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
+  // "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
   // Git Bash
   // "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
   // tabby download https://github.com/Eugeny/tabby

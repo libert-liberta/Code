@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"xdebug.php-debug",
+			"bmewburn.vscode-intelephense-client",
+			"shufo.vscode-blade-formatter",
+			"onecentlin.laravel-blade",
+			"amiralizadeh9480.laravel-extra-intellisense",
+			"absszero.vscode-laravel-goto",
+			"porifa.laravel-intelephense"
+		]
+	}
+}
