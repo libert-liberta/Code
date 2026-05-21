@@ -35,6 +35,7 @@
 			"ms-vscode-remote.vscode-remote-extensionpack",
 			"ms-azuretools.vscode-containers",
 			"continue.continue",
+			"ryanluker.vscode-coverage-gutters",
 		]
 	}
 }

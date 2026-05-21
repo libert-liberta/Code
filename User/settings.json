@@ -281,8 +281,6 @@
     "DC53427HYE": "linux",
     "deskmini-x300": "linux",
     "tech-boost-ec2": "linux",
-    "challtia.vps.conoha.jp-test-challtia": "linux",
-    "conoha.jp-challtia-test-malice-mischief": "linux"
   },
   "editor.unicodeHighlight.ambiguousCharacters": false,
   // 統合ターミナルがプロファイルを読まないときはこれを試す
@@ -327,4 +325,8 @@
     // markdownは 行末の半角スペース2つで改行なので、消さないようにする
     "files.trimTrailingWhitespace": false,
   },
+  // インライン補完を無効化
+  // "editor.inlineSuggest.enabled": false,
+  // Copilot のインライン補完だけ無効化
+  "github.copilot.inlineSuggest.enable": false,
 }
