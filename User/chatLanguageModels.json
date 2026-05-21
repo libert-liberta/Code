@@ -1,0 +1,7 @@
+[
+	{
+		"name": "OpenRouter",
+		"vendor": "openrouter",
+		"apiKey": "${input:chat.lm.secret.openrouter}"
+	}
+]
