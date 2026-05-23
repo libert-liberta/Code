@@ -1,6 +1,7 @@
 *
 !.gitignore
 !*.code-workspace
+!.vscode/extensions.json
 !User/.vscode_extensions
 !User/snippets
 !User/chatLanguageModels.json
