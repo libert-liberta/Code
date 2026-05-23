@@ -4,7 +4,6 @@
 !.vscode/extensions.json
 !User/.vscode_extensions
 !User/snippets
-!User/chatLanguageModels.json
 !User/keybindings.json
 !User/settings.json
 !User/tasks.json
