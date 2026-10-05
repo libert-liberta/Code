@@ -36,6 +36,7 @@
 			"ms-azuretools.vscode-containers",
 			"continue.continue",
 			"ryanluker.vscode-coverage-gutters",
+			"funkyremi.vscode-google-translate",
 		]
 	}
 }

@@ -209,7 +209,7 @@
   // 組み込みの PHP 言語候補機能を有効にするかどうかを制御します。このサポートによって、PHP グローバルと変数の候補が示されます。
   "php.suggest.basic": false,
   // 有効にした場合、拡張機能の更新を自動的にインストールします。更新は Microsoft のオンライン サービスから取得されます。
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
   // 有効にした場合、拡張機能の更新を自動的に確認します。拡張機能に更新がある場合は、拡張機能ビューで古くなった拡張機能として表示されます。更新は Microsoft オンライン サービスから取得されます。
   "extensions.autoCheckUpdates": false,
   /*
@@ -329,4 +329,6 @@
   // "editor.inlineSuggest.enabled": false,
   // Copilot のインライン補完だけ無効化
   "github.copilot.inlineSuggest.enable": false,
+  "redhat.telemetry.enabled": true,
+  "hediet.vscode-drawio.resizeImages": null,
 }

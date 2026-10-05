@@ -2,6 +2,11 @@
 	{
 		"name": "OpenRouter",
 		"vendor": "openrouter",
-		"apiKey": "${input:chat.lm.secret.openrouter}"
+		"apiKey": "${input:chat.lm.secret.43222e1b}"
+	},
+	{
+		"name": "Google",
+		"vendor": "gemini",
+		"apiKey": "${input:chat.lm.secret.bdab433}"
 	}
 ]
